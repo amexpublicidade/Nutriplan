@@ -214,6 +214,18 @@ form{
         color:#888;
     }
     
+    .plusfield>.fields{
+        .text>input,textarea,select{
+            width:100%;
+            .border-radius(3px);
+            .box-sizing;
+            .box-shadow(2px 2px 2px #E9E9E9);
+            border:1px solid #CCC;
+            padding:5px;
+            color:#888; 
+        }
+    }
+    
     textarea{
         resize:vertical;
     }

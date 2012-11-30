@@ -24,12 +24,12 @@ echo $this->Form->create('Produto',array('url'=>array('controller'=>'produtos','
         <?PHP if(!empty($this->data['Cor'])): $i=0; foreach($this->data['Cor'] as $cor): ?>
         <div class="vid_<?=$i?>" data-rel="<?=$i?>">
             <input type="text" name="data[Cor][<?=$i?>][cor]" placeholder="Cor" value="<?=$cor['cor']?>" />
-            <input type="text" name="data[Cor][<?=$i?>][referencia]" placeholder="ReferÃªncia" value="<?=$vid['referencia']?>" />
-            <button class="removev">Remover</button>
+            <input type="text" name="data[Cor][<?=$i?>][referencia]" placeholder="Referência" value="<?=$vid['referencia']?>" />
+            <button class="remove">Remover</button>
         </div>
         <?PHP $i++; endforeach; endif; ?>
     </div>    
-    <div class="button"><button class="add-video">Adicionar</button></div>
+    <div class="button"><button class="add-field">Adicionar</button></div>
 </fieldset>
 
 <?PHP
@@ -37,3 +37,30 @@ echo $this->Form->create('Produto',array('url'=>array('controller'=>'produtos','
 echo $this->Form->hidden('id');
 echo $this->Form->end('Enviar');
 ?>
+
+<script type="text/javascript">
+    
+    var fields=<?PHP echo isset($this->data['Cor'])?count($this->data['Cor']):0; ?>;
+    
+    jQuery(function(){
+       
+       $('.add-field').click(function(){
+           var color = '<div class="cfield_'+fields+'" data-rel="'+fields+'">';
+           color+='<input type="text" name="data[Cor]['+fields+'][cor]" placeholder="Cor" />';
+           color+='<input type="text" name="data[Cor]['+fields+'][referencia]" placeholder="Referência" />';
+           color+='<button class="remove">Remover</button>';
+           color+='</div>';
+           $('.plusfield>.fields').append(color);
+           fields++;
+           return false;
+       });
+       
+       $('button.remove').live('click',function(){
+           var field = $(this).parent().attr("data-rel");
+           $("div[data-rel="+field+"]").detach();
+           return false;
+       });       
+       
+    });
+    
+</script>
