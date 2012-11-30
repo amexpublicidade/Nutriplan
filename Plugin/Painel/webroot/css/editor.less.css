@@ -1,0 +1,15 @@
+.box.editor{
+    padding: 47px 5px 5px 5px;
+    position:relative;
+    
+    nav.buttons{
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    
+}
+iframe.editor{
+    width: 100%;
+    height: 400px;
+}

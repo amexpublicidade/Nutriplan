@@ -1,0 +1,99 @@
+@import "default.less";
+
+@width:350px;
+
+html{
+    background: url(../img/login/background.png) repeat-x left center;
+    min-height:100%;
+}
+
+body{
+    min-height:100%;
+}
+
+#login{
+    
+    width: 600px;
+    height:450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -225px 0 0 -300px;
+    background: url(../img/login/bodybg.png) no-repeat center bottom;
+    
+    .inner{
+        position:relative;
+        width:@width;
+        height:280px;
+        background:#c90000;
+        .border-radius(5px);
+        margin:0 auto;
+        font-family:arial;
+        color:#FFF;
+        margin-top:10px;
+        
+        h1.title{
+            background:#9a0b0b;
+            padding:10px;
+            font-size:18px;
+            .border-radius(5px 5px 0 0);
+        }
+        
+    }
+    
+    .reflex{
+        width: @width;
+        height:50px;
+        background:url(../img/login/reflex.png) repeat-x;
+        margin:0 auto;
+        .border-radius(5px 5px 0 0);
+    }
+}
+
+#logo{
+    margin:0 auto;
+    display:block;
+}
+
+#login-form{
+    width:280px;
+    margin:0 auto;
+    
+    label{
+        display:block;
+    }
+    
+    .text,.password{
+        margin-top:20px;
+    }
+    
+    .text input, .password input{
+        border:none;
+        display:block;
+        width:100%;
+        padding:5px;
+        .border-radius(3px);
+        .box-sizing;
+    }
+    
+    .recover-password{
+        color:#FFF;
+        font-size:10px;
+        float:left;
+        margin-top:30px;
+    }
+    
+    .submit{
+        input{
+            width:100px;
+            height:37px;
+            background:url(../img/login/login.png) no-repeat center center;
+            overflow:hidden;
+            text-indent:-100em;
+            border:none;
+            float:right;
+            margin-top:20px;
+        }
+    }
+    
+}
