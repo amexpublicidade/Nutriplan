@@ -1,0 +1,45 @@
+@import "default";
+
+.plusfield {
+    position:relative;
+    .add-field{
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+}
+
+.pfield {
+    display:block;
+    padding:10px 0;
+    clear:both;
+}
+
+.photo-box {
+    float:left;
+    width:15%;
+    height:100px;
+    border:1px solid #999;
+    .border-radius(5px);
+}
+
+.fields {
+      .inputs{  
+            padding-left:6px;
+            width:80%;
+            float:left;
+            input[type=text],select,textarea {
+                    width:100%;
+                    .border-radius(3px);
+                    .box-sizing;
+                    .box-shadow(2px 2px 2px #E9E9E9);
+                    border:1px solid #CCC;
+                    padding:5px;
+                    color:#888;
+                    display:block;
+            }
+            button {
+                float:right;
+            }
+       }
+}

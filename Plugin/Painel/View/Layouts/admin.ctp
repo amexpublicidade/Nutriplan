@@ -6,6 +6,7 @@
         <?PHP
         echo $this->Html->css('Painel.reset', 'stylesheet/less');
         echo $this->Html->css('Painel.admin.less', 'stylesheet/less');
+        //echo $this->Html->css('Painel.customfields.less','stylesheet/less');
         echo $this->Html->css('Painel./jcrop/jquery.Jcrop.min.css');
         //echo $this->Html->css('Painel./redactor/redactor.css');
         //echo $this->Html->css('Painel.editor.less.css?'.time(),'stylesheet/less');

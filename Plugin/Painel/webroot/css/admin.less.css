@@ -119,6 +119,25 @@ table.tables{
                 padding-bottom:20px;
                 font-size: 1.3em;
                 &.edit{ width: 60px ; }
+                a{
+                    color:#069;
+                    text-decoration:none;
+                    font-weight:bold;                    
+                    &.asc{
+                        &:before{
+                            content:"▲";
+                            margin-right:5px;
+                            color:#F00;
+                        }   
+                    }                    
+                    &.desc{
+                        &:before{
+                            content:"▼";
+                            margin-right:5px;
+                            color:#F00;
+                        }   
+                    }
+                }
             }
         }
     }
@@ -214,18 +233,6 @@ form{
         color:#888;
     }
     
-    .plusfield>.fields{
-        .text>input,textarea,select{
-            width:100%;
-            .border-radius(3px);
-            .box-sizing;
-            .box-shadow(2px 2px 2px #E9E9E9);
-            border:1px solid #CCC;
-            padding:5px;
-            color:#888; 
-        }
-    }
-    
     textarea{
         resize:vertical;
     }
@@ -267,3 +274,16 @@ form{
     }
 }
 
+nav.buttons{
+    position:absolute;
+    top:15px;
+    right:5px;
+    a{
+        background:url(../img/bgpannellinks.png) repeat-x;
+        color:#000;
+        padding:5px;
+        border:1px solid #999;
+        .border-radius(5px);
+        text-decoration:none;
+    }
+}
