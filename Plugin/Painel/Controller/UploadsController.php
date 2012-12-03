@@ -15,7 +15,7 @@ class UploadsController extends PainelAppController{
         $filename=$result['filename'];
         $file="img/galleries/$filename";
         Uploader::resize($file);        
-        if($db=$this->Image->save(array('filename'=>$result['filename']))){
+        if($db=$this->Image->save(array('filename'=>$result['filename'],'deadline'=>date('Y-m-d H:i:s',strtotime('+2 hours'))))){
             //pre(array_merge($result,$db['Image']));
             $return=array_merge($result,$db['Image']);
             echo json_encode($return);
